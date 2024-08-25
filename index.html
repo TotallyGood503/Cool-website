@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="./style.css">
-    <script src="./js/7.js" defer></script>
+    <script src="./js/index.js" type="module" defer></script>
     <link rel="Shortcut icon" href="./img/logo.jfif" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,14 @@
 <body>
     <header>
         <div class="header">
-            <span class="open">&#9776;</span>
+            <span class="openAside">&#9776;</span>
             <h3>Головна сторінка</h3>
             <p>Тут мая бути <b>текст</b>, але його <span class="orange">нема</span></p>
             <div class="column tel">
                 <p class="orange">Кнопочкииии</p>
                 <div class="section">
                     <button><img src="./img/icon/telegram.svg" alt="Telegram">Телеграм</button>
-                    <button><img src="./img/icon/viber.svg" alt="Viber">Вайбер(нема)</button>
+                    <button id="viberButtn"><img src="./img/icon/viber.svg" alt="Viber">Вайбер(нема)</button>
                 </div>
             </div>
             <div class="column">
@@ -32,22 +32,17 @@
             </div>
         </div>
     </header>
-    <aside>
+    <aside class="aside">
         <div class="section">
 
             <span class="close">X</span>
             <h3>Меню</h3>
         </div>
-        <ul>
-            <li class="menu">Головна сторінка</li>
-            <li class="menu">Інформація</li>
-            <li class="menu">Налаштування</li>
-            <li class="menu">Моя сторінка</li>
-            <li class="menu">Коди</li>
+        <ul id="nav"></ul>
         </ul>
     </aside>
     <main>
-        <section class="max_width bunner">
+        <section class="max_width bunner scroll">
             <div class="blok">
 
                 <h1>Симулятор крутого <span class="orange">сайту</span></h1>
@@ -55,7 +50,7 @@
                 <p>придумана в такому виді бо не було ідеЇ для магазину
                 </p>
                 <div class="wrap">
-                    <button class="btn_bunner">Що це таке</button>
+                    <button class="btn_bunner" id="modelBtn">Що це таке</button>
                     <button class="btn_bunner">Товарчики</button>
                     <button class="btn_bunner">Інфа по коду</button>
                 </div>
@@ -67,40 +62,11 @@
                 <button class="active btn">Замовити</button>
             </form>
         </section>
-        <section class="section1">
+        <section class="section1 scroll">
             <h2>Інфа по всякому тут</h2>
             <p>Читай :)</p>
-            <div class="wrap">
-                <div class="blok">
-                    <h3>Код на джаву</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="./img/java-svgrepo-com.svg" alt="" class="cont_img">
-                </div>
-                <div class="blok">
-                    <h3>Код на пайтон</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="./img/python-svgrepo-com.svg" alt="" class="cont_img">
-                </div>
-                <div class="blok">
-                    <h3>Код на КСС</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="./img/css-3.svg" alt="" class="cont_img">
-                </div>
-                <div class="blok">
-                    <h3>Код на Луа</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="/img/lua-svgrepo-com.svg" alt="" class="cont_img">
-                </div>
-                <div class="blok">
-                    <h3>Код на С#</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="./img/c--4.svg" alt="" class="cont_img">
-                </div>
-                <div class="blok">
-                    <h3>Код на Джаваскріпт</h3>
-                    <button class="btn">Розкажи получше<img src="./img/icon/btn_arr.png" alt=""></button>
-                    <img src="./img/java-svgrepo-com (1).svg" alt="" class="cont_img">
-                </div>
+            <div class="wrap" id="section1">
+               
             </div>
         </section>
         <section class="section2">
@@ -110,107 +76,50 @@
                 <div class="blok">
                     <h3>Почни з джави, Пайтона, або Луа</h3>
                     <p>мов багато, і повір, вивчиш одну, вже крутелик :)</p>
-                    <button class="btn shadow_button">Розпочати!!!</button>
+                    <button class="btn shadow_button" id="startBtn">Розпочати!!!</button>
                 </div>
             </div>
         </section>
-        <section class="section3">
+        <section class="section3 scroll">
 
             <h2><span class="min">як взагалі робити</span> САЙТИ</h2>
-            <div class="wrap">
-                <div class="blok">
-                    <div class="column">
-                        <h4>Код не важкий</h4>
-                        <p>на HTML та КСС працювати це як яблуко з'їсти</p>
-                    </div>
-                </div>
-                <div class="blok">
-                    <div class="column">
-                        <h4>Классний результат</h4>
-                        <p>вийде гарно і круто :)</p>
-                    </div>
-                </div>
-                <div class="blok">
-                    <div class="column">
-                        <h4>Не довго часу на день</h4>
-                        <p>можна по менше 1 години на день і все бомба</p>
-                    </div>
-                </div>
-                <div class="blok">
-                    <div class="column">
-                        <h4>Можлива крутість</h4>
-                        <p>якщо старатись, ти крутеликом станеш</p>
-                    </div>
-                </div>
-                <div class="blok">
-                    <div class="column">
-                        <h4>менше 2 ГБ на компі</h4>
-                        <p>багато пам'яті не треба</p>
-                    </div>
-                </div>
-                <div class="blok">
-                    <div class="column">
-                        <h4>ВЕСЕЛОООО</h4>
-                        <p>можна щось робити якщо скучно</p>
-                    </div>
-                </div>
+            <div class="wrap" id="section3">
+              
             </div>
         </section>
-        <section class="section4">
+        <section class="section4 scroll">
             <h2>Найди або вивчи <span class="min">крутий код на цьому сайті</span></h2>
-            <div class="wrap max_width">
-                <img src="./img/java-svgrepo-com.svg" alt="">
-                <img src="./img/python-svgrepo-com.svg" alt="">
-                <img src="./img/html-1.svg" alt="">
-                <img src="./img/css-3.svg" alt="">
-                <img src="./img/lua-svgrepo-com.svg" alt="">
+            <div class="wrap max_width" id="section4">
+          
             </div>
             <button class="btn">Навчи мене!!!</button>
         </section>
-        <section class="section5">
-            
+        <section class="section5 scroll">
+
             <h2><span class="min">Почни </span>кодити<span class="min"> тому що так круто!</span></h2>
             <div class="section">
                 <div class="img">
                     <img src="/img/content/person.png" alt="">
-                    <ol>
-                        <li>Це картинка того,</li>
-                        <li>як ти можеш виглядати після кодингу...</li>
-                        <li>або не так</li>
+                    <ol id="section5_ol">
+                       
                     </ol>
                 </div>
-                <ul class="wrap">
-                    <li>Тут мають бути причини чому треба кодити</li>
-                    <li>Але їх поки що нема</li>
-                    <li>не хвилюйся,</li>
-                    <li>скоро будуть ;)</li>
+                <ul class="wrap" id="section5_ul">
+         
                 </ul>
             </div>
         </section>
         <section class="section6 max_width">
-            <div class="section">
-                <div class="blok">
-                    <h2>7</h2>
-                    <p>мов програмування на вивчення</p>
-                </div>
-                <div class="blok">
-                    <h2>1</h2>
-                    <p>місяць на одну мову</p>
-                </div>
-                <div class="blok">
-                    <h2>2</h2>
-                    <p>години на день</p>
-                </div>
+            <div class="section" id="section6">
+                
             </div>
         </section>
         <section class="section7">
             <h3>Самі прості <span class="min">мови на вивчення для початку</span></h3>
             <div class="sliders">
                 <img src="./img/content/slider-section/sl_arrow_left.png" alt="" class="left">
-                <div class="container">
-                    <img src="./img/python-svgrepo-com.svg" alt="" class="slids">
-                    <img src="img/java-svgrepo-com.svg" alt="" class="slids">
-                    <img src="./img/html-1.svg" alt="" class="slids">
+                <div class="container" id="section7">
+             
                 </div>
                 <img src="./img/content/slider-section/sl_arrow_right.png" alt="" class="right">
             </div>
@@ -222,33 +131,39 @@
         <h3>Тут текст є</h3>
         <div class="column">
             <h4>Список :/</h4>
-            <ul>
-                <li><a href="#"></a>Крутий сайт</li>
-                <li><a href="#"></a>Картинка борща</li>
-                <li><a href="#"></a>Чийсь ютуб</li>
-                <li><a href="#"></a>Код на Java</li>
+            <ul id="footer_list">
+                
             </ul>
         </div>
-        <div class="column">
-            <h4>Крутий сайт</h4>
-            <h4> Сам робив</h4>
-            <h4> оцени 10/10</h4>
+        <div class="column" id="footer_textList">
+            
         </div>
         <div class="column">
-            <div class="colum">
-                <p class="section"><img src="./img/icon/footer-icon/map.svg" alt=""><span>(локація автора тут)</span>
-                </p>
-                <p class="section"><img src="./img/icon/footer-icon/message.svg"
-                        alt=""><span>недампочту@gmail.com</span></p>
-                <p class="section"><img src="./img/icon/footer-icon/tel.svg" alt=""><span>не дам телефон</span></p>
+            <div class="colum" id="footer_info">
+                
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="hyperLinks">
             <a href="#"><img src="./img/icon/footer-icon/youtube.svg" alt=""></a>
             <a href="#"><img src="./img/icon/telegram.svg" alt=""></a>
             <p>Контактики</p>
         </div>
     </footer>
+    <div class="model">
+        <div class="container1">
+            <h3>Питай :)</h3>
+            <p>Відгуки я читаю 23/6, тому я буду радий послухати відгук/питання!</p>
+            <textarea name="" id=""></textarea>
+            <input type="text">
+            <button class="btn" id="modelFormBtn">Надіслати питання</button>
+        </div>
+    </div>
+    <div class="model2">
+        <div class="container2">
+            <h3>Нажаль вайберу поки що нема :(</h3>
+            <button class="btn" id="missingBtn">Повернутися</button>
+        </div>
+    </div>
 </body>
 
 </html>

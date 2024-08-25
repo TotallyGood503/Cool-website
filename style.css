@@ -45,6 +45,7 @@ button:active {
 aside {
     display: none;
     backdrop-filter: blur(18px);
+    z-index: 900;
 }
 
 h1 {
@@ -113,6 +114,7 @@ aside {
     top: 0;
     left: 0;
     padding: 30px;
+
 
 }
 
@@ -350,7 +352,7 @@ ol {
     position: relative;
 }
 
-.section5 ul li:before{
+.section5 ul li:before {
     content: '';
     width: 21px;
     height: 21px;
@@ -361,39 +363,44 @@ ol {
     background: url(./img/icon/ul.png);
 }
 
-.section6{
+.section6 {
     background-color: #000;
 }
 
-.section6 h2{
+.section6 h2 {
     font-size: 60px;
     color: blueviolet;
 }
-.section6 .blok{
+
+.section6 .blok {
     flex-direction: row;
     align-items: center;
     padding: 30px 0px;
 }
 
-.section7 h3{
+.section7 h3 {
     text-align: center;
     padding: 20px 0px;
 }
 
-.sliders{
+.sliders {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.sliders .container img{
+
+.sliders .container img {
     width: 150px;
     height: 150px;
 }
-.left, .right{
+
+.left,
+.right {
     cursor: pointer;
 }
+
 /* ! FOOTER */
-footer{
+footer {
     background: rgb(2, 2, 2);
     color: white;
     display: flex;
@@ -402,15 +409,81 @@ footer{
     gap: 70px;
 }
 
-footer .column{
+footer .column {
     list-style-type: none;
     flex-direction: column;
 }
 
-footer ul{
+footer ul {
     list-style-type: none;
     padding: 30px;
 }
-.colum{
+
+footer ul:hover {
+    color: orange;
+}
+
+.colum {
     gap: 20px;
+}
+
+/* ! MODEL */
+
+.model {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.527);
+}
+
+.model .container1 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 40px 60px;
+}
+
+.model .container1 input {
+    height: 30px;
+}
+
+.model .container1 textarea {
+    resize: none;
+    height: 80px;
+}
+
+.model2 {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.527);
+}
+
+.model2 .container2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 40px 60px;
 }
